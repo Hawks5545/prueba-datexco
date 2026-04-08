@@ -18,7 +18,7 @@ const initializeDatabase = () => {
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       title TEXT NOT NULL,
       description TEXT NOT NULL,
-      status TEXT DEFAULT 'pending',
+      status TEXT DEFAULT 'pendiente',
       created_at DATETIME DEFAULT CURRENT_TIMESTAMP
     );
 

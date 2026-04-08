@@ -7,6 +7,13 @@
   background: #ffffff;
   cursor: pointer;
   transition: border-color 0.2s;
+  background: #ffffff;
+  color: #1a1a2e;
+}
+
+.card select option {
+  background: #ffffff;
+  color: #1a1a2e;
 }
 
 .card select:focus {

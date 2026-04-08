@@ -11,7 +11,7 @@ const createMission = (req, res) => {
   const { title, description } = req.body;
 
   if (!title || !description) {
-    return res.status(400).json({ error: "Title and description are required" });
+    return res.status(400).json({ error: "El título y la descripción son obligatorios" });
   }
 
   const result = db
@@ -29,21 +29,21 @@ const assignMission = (req, res) => {
   const { userId, missionId } = req.body;
 
   if (!userId || !missionId) {
-    return res.status(400).json({ error: "userId and missionId are required" });
+    return res.status(400).json({ error: "El userId y missionId son obligatorios" });
   }
 
   const user = db.prepare("SELECT * FROM users WHERE id = ?").get(userId);
   const mission = db.prepare("SELECT * FROM missions WHERE id = ?").get(missionId);
 
-  if (!user) return res.status(404).json({ error: "User not found" });
-  if (!mission) return res.status(404).json({ error: "Mission not found" });
+  if (!user) return res.status(404).json({ error: "Usuario no encontrado" });
+  if (!mission) return res.status(404).json({ error: "Misión no encontrada" });
 
   const existing = db
     .prepare("SELECT * FROM user_missions WHERE user_id = ? AND mission_id = ?")
     .get(userId, missionId);
 
   if (existing) {
-    return res.status(400).json({ error: "Mission already assigned to this user" });
+    return res.status(400).json({ error: "Esta misión ya fue asignada a este usuario" });
   }
 
   const result = db
@@ -54,7 +54,7 @@ const assignMission = (req, res) => {
     id: result.lastInsertRowid,
     userId,
     missionId,
-    message: `Mission "${mission.title}" assigned to "${user.name}"`,
+    message: `Misión "${mission.title}" asignada a "${user.name}"`,
   });
 };
 
