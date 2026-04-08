@@ -19,7 +19,7 @@ const App = () => {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>🚀 Gestor de Misiones</h1>
+        <h1> Gestor de Misiones</h1>
         <p>Administra usuarios, misiones y asignaciones de tu comunidad</p>
       </header>
 
