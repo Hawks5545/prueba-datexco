@@ -89,6 +89,7 @@ Se usó la API de **Groq** con el modelo `llama-3.1-8b-instant` por ser gratuita
 
 - Agregar autenticación de usuarios con JWT
 - Permitir cambiar el estado de una misión (pendiente, en progreso, completada)
+- Permitir eliminar o editar un registro (usuario, mision o asignacion) 
 - Agregar paginación en las listas
 - Escribir tests unitarios para los controllers
 - Desplegar la app en un servidor (Railway, Render, etc.)
