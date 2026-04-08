@@ -1,0 +1,36 @@
+.card textarea {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  resize: vertical;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.card textarea:focus {
+  border-color: #4f46e5;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.button-group .secondary {
+  background: #f5f3ff;
+  color: #4f46e5;
+  border: 1px solid #c7d2fe;
+}
+
+.button-group .secondary:hover {
+  background: #ede9fe;
+}
+
+.button-group .secondary:disabled {
+  background: #f5f3ff;
+  color: #a5b4fc;
+  cursor: not-allowed;
+}
